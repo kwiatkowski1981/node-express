@@ -6,9 +6,10 @@ const users = [{name: 'Kyle'}, {name: 'Sally'}];
 router.use(logger);
 
 router.get('/', (req, res) => {
-    res.send('User list');
+    // res.send('User list');
     console.log(req.query.name);
     // res.render('users/userList.ejs');
+    res.send(users);
 
 });
 
@@ -55,8 +56,6 @@ function logger(req, res, next) {
     console.log(req.originalUrl);
     next();
 }
-
-
 
 
 module.exports = router;
