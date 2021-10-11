@@ -7,7 +7,7 @@ router.use(logger);
 
 router.get('/', (req, res) => {
     // res.send('User list');
-    console.log(req.query.name);
+    // console.log(req.query.name);
     // res.render('users/userList.ejs');
     res.send(users);
 
@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
 router
     .route('/:id')   //    .userId if path === '/:userId' or any else
     .get((req, res) => {
-        console.log(req.user);
+        // console.log(req.user);
         res.send(`Get User with ID:  ${req.params.id} is ${req.user.name}`);
         console.log(users);
     })
